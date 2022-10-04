@@ -107,7 +107,4 @@ dist
 
 # TernJS port file
 .tern-port
-src/components/
-src/interfaces/
-src/redux-slices/
-src/store/
+
