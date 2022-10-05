@@ -30,8 +30,9 @@ const SearchFilter = () => {
     const breweriesStatus = useSelector(
         (state: RootState) => state.breweries.status
     )
+   
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+    event.preventDefault()
         await dispatch(
             fetchBreweries({
                 city,

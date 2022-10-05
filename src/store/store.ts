@@ -1,6 +1,8 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
 import breweriesReducer from '@redux-slices/breweries.slice'
 import thunkMiddleware from 'redux-thunk'
+// eslint-disable-next-line no-use-before-define
+import * as reduxThunk from 'redux-thunk/extend-redux'
 
 export const store = configureStore({
     reducer: {
