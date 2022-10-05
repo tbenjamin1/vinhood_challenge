@@ -18,7 +18,12 @@ const Results = () => {
     }, [])
 
     return (
-        <div>
+        <div className=''>
+        
+
+            <button className="btn m-5">
+                Back
+            </button>
             <Breweries breweries={breweries} />
         </div>
     )

@@ -5,6 +5,7 @@ import { RootState } from '@store/store'
 import { FormEvent, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import {Button} from '../../stories/Button'
 
 const TYPES = [
     'micro',
@@ -121,13 +122,10 @@ const SearchFilter = () => {
                     />
                 </Collapse>
                 <div className="my-3 flex justify-end gap-2">
-                    <button className="btn" type="reset">
-                        Cancel
-                    </button>
+                <Button type='reset' label='cancel' size='medium' primary={true} btnClass='btn' ></Button>
+
                     <button
-                        className={` ${
-                            breweriesStatus === 'loading' && 'loading'
-                        } btn btn-primary`}
+                        className={`${breweriesStatus === 'loading' && 'loading'} btn btn-primary`}
                         type="submit"
                     >
                         Apply

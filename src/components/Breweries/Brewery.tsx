@@ -1,7 +1,10 @@
+import { Card } from "../../stories/Card"
+
+
 interface IBreweryProps {
     brewry: {
         id?:string,
-        name?: string | undefined
+        name?: string | undefined,
         state?: string | undefined
     }
 }
@@ -9,13 +12,10 @@ interface IBreweryProps {
 const Brewery = (props: IBreweryProps) => {
 
     return (
-        
-        <div className="card bg-gray-100 border border-gray-50 shadow">
-            <div className="card-body">
-                <h2 className="card-title">{props.brewry.name}</h2>
-                <p>state: {props.brewry.state}</p>
-            </div>
-        </div>
+        <div>
+        <Card title={props.brewry.name} body={props.brewry.state} card="card bg-gray-100 border border-gray-50" cardbody="card-body" cardtitle="card-title"></Card>
+         
+     </div>
 
     )
 }
