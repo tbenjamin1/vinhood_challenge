@@ -39,3 +39,8 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+export const buttonClass = Template.bind({});
+buttonClass.args = {
+  btnClass: 'btn',
+  label: 'Button',
+};
