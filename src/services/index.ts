@@ -1,2 +1,2 @@
-import {counterService} from './counter.service';
-export {counterService}
+import { counterService } from './counter.service'
+export { counterService }

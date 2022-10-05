@@ -1,5 +1,5 @@
 import IBreweriesPayload from '@interfaces/IBreweriesPayload'
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import {  createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { RootState } from '@store/store'
 import axios from 'axios'
 
