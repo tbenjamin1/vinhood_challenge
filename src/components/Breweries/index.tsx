@@ -14,8 +14,8 @@ const Breweries = (props: { breweries: any[] }) => {
                             <Brewery key={brewry.id} brewry={brewry} />
                         )
                     )}
-                </div>) : (<div className='flex flex-row justify-center items-center '>
-                    <div className="card bg-gray-100 border border-gray-50 shadow ">
+                </div>) : (<div className='flex flex-row justify-center items-center'>
+                    <div className="card bg-gray-100 border border-gray-50 shadow">
                         <div className="card-body flex flex-col justify-center items-center">
                             <h2 className="card-title m-4"> Not Available</h2>
                             <Link to='/'>
