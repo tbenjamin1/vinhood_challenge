@@ -1,4 +1,7 @@
+import { Button } from '../../stories/Button';
 import Brewery from './Brewery'
+
+import { Link } from 'react-router-dom';
 
 const Breweries = (props: { breweries: any[] }) => {
     return (
@@ -12,9 +15,10 @@ const Breweries = (props: { breweries: any[] }) => {
                     <div className="card bg-gray-100 border border-gray-50 shadow">
                         <div className="card-body">
                             <h2 className="card-title m-4"> Not Available</h2>
-                            <button className="btn" type="reset">
-                                Back
-                            </button>
+                            <Link to='/'>
+                            <Button label='Back ' btnClass='btn' size='large' backgroundColor='bg-gray-300' ></Button>
+                            </Link>
+                           
                         </div>
                     </div>
 

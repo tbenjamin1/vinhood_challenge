@@ -18,7 +18,7 @@ type Props = {
 const Application: React.FunctionComponent<{}> = () => {
     return (
         <Provider store={store}>
-            <div className="max-w-full md:max-w-4xl p-2 md:p-10 mx-auto">
+            <div data-testid="home-page" className="max-w-full md:max-w-4xl p-2 md:p-10 mx-auto">
                 <BrowserRouter>
                     <Switch>
                         {routes.map((route, index) => {

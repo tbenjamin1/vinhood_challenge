@@ -3,7 +3,7 @@
       "<rootDir>/src"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/jest/jest.setup.js"
+      "<rootDir>/src/jest/jest.setup.js"
     ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -14,11 +14,6 @@
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     "testEnvironment": "jsdom",
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.scss$": "jest-scss-transform",
-      "^.+\\.css$": "<rootDir>/jest/mocks/cssMock.js"
-    },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx|png|svg)$",
       "^.+\\.module\\.(css|sass|scss)$"

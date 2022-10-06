@@ -1,3 +1,4 @@
+import React from 'react';
 import Collapse from '@components/Collapse'
 import { fetchBreweries } from '@redux-slices/breweries.slice'
 import { useAppDispatch } from '@store/hooks'
@@ -52,7 +53,7 @@ const SearchFilter = () => {
             <form className="py-4" onSubmit={handleSubmit}>
                 <Collapse title="Filter By">
                     <div className="form-control my-3">
-                        <label htmlFor="city" className="label">
+                        <label date-testid="home-page"  htmlFor="city" className="label">
                             Name
                         </label>
                         <input
@@ -122,14 +123,10 @@ const SearchFilter = () => {
                     />
                 </Collapse>
                 <div className="my-3 flex justify-end gap-2">
-                <Button type='reset' label='cancel' size='medium' primary={true} btnClass='btn' ></Button>
-
-                    <button
-                        className={`${breweriesStatus === 'loading' && 'loading'} btn btn-primary`}
-                        type="submit"
-                    >
-                        Apply
-                    </button>
+                <Button data-testid='filter-btn' type='reset' label='cancel' size='medium' primary={true} btnClass='btn' ></Button>
+                
+                 <Button type="submit" label='Apply ' btnClass={`btn ${breweriesStatus === 'loading' ? 'loading':''} btn-primary`} backgroundColor="blue" size='large' primary={false} ></Button>
+           
                 </div>
             </form>
         </div>
