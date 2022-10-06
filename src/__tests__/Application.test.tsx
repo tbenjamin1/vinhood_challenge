@@ -1,9 +1,12 @@
+import * as ReactDOM from 'react-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'
+import Filter from '../components/searchFilter/index';
 
-import App from '../Application';
 
 it('Should render welcome page', () => {
-    render(<App />);
-    expect(screen.getByTestId('counter-view')).toBeDefined();
-})  
+   const component = render(<Filter/>);
+   const homeElement= component.getByTestId('home-page');
+   expect(homeElement.textContent).toBe('Name')
+}) 

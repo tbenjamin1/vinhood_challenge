@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Button } from './Button';
-import './header.css';
 
 type User = {
   name: string;
@@ -16,23 +16,31 @@ interface HeaderProps {
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
-    <div className="wrapper m-5">
+    <div className=" m-5 flex justify-between bg-blue-200 p-3">
       <div>
-       
-        <h1>VinHood</h1>
+        <Link to={'/'}>
+          <h1 className='mt-2'> <b>VinHood</b> </h1>
+        </Link>
       </div>
       <div>
         {user ? (
           <>
-            <span className="welcome">
+            <span className="welcome mx-2">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="small" primary={true}  onClick={onLogout} btnClass='btn' label="Back Home" />
+            <Link to={'/'}>
+              <Button size="small" primary={true} onClick={onLogout} btnClass='btn' label="Home" />
+            </Link>
+
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Back Home" />
-            
+
+            <Link to={'/results'}>
+              <Button size="small" onClick={onLogin} label="Back to filter" />
+            </Link>
+
+
           </>
         )}
       </div>

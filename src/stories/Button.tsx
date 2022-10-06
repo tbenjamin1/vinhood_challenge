@@ -1,10 +1,9 @@
 import React from 'react';
-import './button.css';
 
 interface ButtonProps {
- 
+
   primary?: boolean;
-  btnClass?: 'btn' ;
+  btnClass?: string ;
   backgroundColor?: string;
   type?:"button" | "submit" | "reset" | undefined;
   size?: 'small' | 'medium' | 'large';
@@ -17,6 +16,7 @@ interface ButtonProps {
 
 export const Button = ({
   primary = false,
+
   size = 'medium',
   btnClass,
   backgroundColor,
@@ -24,7 +24,7 @@ export const Button = ({
   type,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'btn-primary' : 'btn-secondary';
   return (
     <button
 
@@ -33,6 +33,7 @@ export const Button = ({
       {...props}
     >
       {label}
+      
     </button>
   );
 };
