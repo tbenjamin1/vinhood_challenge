@@ -26,14 +26,17 @@ const Results = () => {
                 onCreateAccount={() => { }}
                 onLogin={() => { }}
                 onLogout={() => { }} />
-
-              {breweries.length &&  <div className='  flex flex-col justify-center items-center my-4 '>
+                <div className='text-white'> 
+                {breweries.length &&  <div className='  flex flex-col justify-center items-center my-4 '>
                 <div className='flex flex-col justify-center items-center rounded-md w-64 bg-blue-200'>
-                <h1 className='p-2 '> Filter Results </h1> 
+                <h1 className='p-2 text-black'> Filter Results </h1> 
                 </div>
                
              
               </div> }
+                </div>
+
+            
 
             <Breweries breweries={breweries} />
         </div>

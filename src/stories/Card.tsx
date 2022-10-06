@@ -24,25 +24,5 @@ export const Card = ({title,body,cardbody,cardtitle,card,backgroundColor, ...pro
         <p>state:{body}</p>
     </div>
 </div>
-//   <header>
-//     <div className="wrapper">
-//       <div>
-       
-//         <h1>sample card</h1>
-//       </div>
-//       <div>
-//         {title ? (
-//           <>
-//             <span className="welcome">
-//               Welcome, <b>{body}</b>
-//             </span>
-//           </>
-//         ) : (
-//           <>
-            
-//           </>
-//         )}
-//       </div>
-//     </div>
-//   </header>
+
 );
