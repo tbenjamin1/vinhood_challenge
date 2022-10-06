@@ -5,7 +5,6 @@ import { Header } from '../../stories/Header';
 const Home = () => {
     return (
         <div>
-           
              <Header user={{
                 name: 'VinHood Challenge'
             }}
