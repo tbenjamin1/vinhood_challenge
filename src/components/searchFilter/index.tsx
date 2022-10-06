@@ -49,7 +49,7 @@ const SearchFilter = () => {
     }
 
     return (
-        <div>
+        <div data-testid="filter">
             <form className="py-4" onSubmit={handleSubmit}>
                 <Collapse title="Filter By">
                     <div className="form-control my-3">
