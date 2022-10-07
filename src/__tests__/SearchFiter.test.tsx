@@ -16,13 +16,14 @@ it('render filter page',() => {
         error: null,
       },
     });
-   render(<Provider store={store}><SearchFilter/> </Provider>);
+   render(<Provider store={store}><SearchFilter/></Provider>);
    expect(screen.getByTestId('filter'))
 })
 
 describe('My Connected React-Redux Component', () => {
     let store:any;
     let component:any;
+    let buttonApply:any;
   
     beforeEach(() => {
       store = mockStore({
@@ -39,30 +40,19 @@ describe('My Connected React-Redux Component', () => {
           <SearchFilter />
         </Provider>
       );
+
+      buttonApply= screen.getByRole('button',{ name:/Apply/i})
     });
   
-    it('should render with given state from Redux store', () => {
-      expect(component.toJSON()).toMatchSnapshot();
+    it('apply button should be defined ', () => {
+      expect(buttonApply).toBeDefined() ;
     });
 
-    it('should dispatch an action on button click', () => {
-        renderer.act(() => {
-          component.root.findByType('button').props.onClick();
-        });
-        renderer.act(() => {
-            component.root.findByType('input')
-              .props.onChange({ target: { value: 'satte name' } });
-          });
+    it('should render with given state from Redux store', () => {
+      expect(component).toMatchSnapshot();
+    });
+
     
-        expect(store.dispatch).toHaveBeenCalledTimes(1);
-        expect(store.dispatch).toHaveBeenCalledWith(
-            fetchBreweries({ city:'kigali',
-                type:'micro',
-                name:'brewery',
-                sort: 'desc',
-                perPage:6, })
-        );
-      });
 
  
   
